@@ -123,6 +123,7 @@ class ArticleController extends AppBaseController
     public function update($id, UpdateArticleRequest $request)
     {
         $article = $this->articleRepository->find($id);
+        
 
         if (empty($article)) {
             Flash::error('Article not found');
